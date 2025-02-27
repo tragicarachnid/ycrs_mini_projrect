@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Class Schedule</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <!-- 🔹 NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">YCRS - PHP
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html" class="active">Classes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 PAGE TITLE -->
+    <h1 class="page-title">Yoga Class Schedule</h1>
+
+    <!-- 🔹 SEARCH BAR -->
+    <input type="text" id="searchBar" placeholder="Search for a class..." onkeyup="filterClasses()">
+
+    <!-- 🔹 FILTER OPTIONS -->
+    <div class="filters">
+        <select id="typeFilter" onchange="filterClasses()">
+            <option value="">All Types</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+        </select>
+        <select id="timeFilter" onchange="filterClasses()">
+            <option value="">All Times</option>
+            <option value="7:00 AM">7:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+        </select>
+    </div>
+
+    <!-- 🔹 CLASS GRID -->
+    <div id="classGrid" class="grid-container">
+        <div id="googleEnrollButton"></div>
+
+    </div>
+
+    <script src="classes.js"></script>
+    <!-- Load Google's Sign-In Library -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<!-- Google Sign-In Button -->
+<div id="g_id_onload"
+     data-client_id="802733951561-267k18jvva4bh74p2r24s4ffqnctsh9u.apps.googleusercontent.com"
+     data-auto_prompt="false"
+     data-callback="handleCredentialResponse">
+</div>
+
+<div class="g_id_signin" data-type="standard"></div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+  function handleCredentialResponse(response) {
+      console.log("ID Token: " + response.credential);
+      window.location.href = "http://127.0.0.1:3000/google_callback.php?token=" + response.credential;
+  }
+
+  function initGoogleSignIn() {
+      google.accounts.id.initialize({
+          client_id: "802733951561-267k18jvva4bh74p2r24s4ffqnctsh9u.apps.googleusercontent.com.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+      });
+
+      google.accounts.id.renderButton(
+          document.getElementById("googleEnrollButton"),
+          { theme: "outline", size: "large" }
+      );
+  }
+</script>
+
+
+</body>
+</html>

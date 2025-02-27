@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #6a0dad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+nav ul li a:hover, .active {
+  color: #ffcc00;
+}
+
+.admin-panel a {
+  background: white;
+  color: #6a0dad;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background: #fff;
+}
+
+.contact-box, .message-box {
+  width: 45%;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #6a0dad;
+}
+
+hr {
+  width: 50px;
+  height: 3px;
+  background: #6a0dad;
+  border: none;
+  margin: 10px auto;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #6a0dad;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #5a0cad;
+}

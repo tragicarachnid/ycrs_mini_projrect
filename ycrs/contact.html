@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - YCRS</title>
+    <link rel="stylesheet" href="styles4.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo"> 
+            <img src="logo.jpg" alt="Logo"> YCRS - PHP
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+        <div class="admin-panel">
+          <li><a href="admin.html" class="active">Admin Panel</a></li>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <hr>
+            <p><strong>Email</strong><br> roja@gmail.com</p>
+            <p><strong>Telephone #</strong><br> 456-987-1231</p>
+            <p><strong>Mobile #</strong><br> 9901072764</p>
+            <p><strong>Address</strong><br> Banashankari 6th stage, Bangalore</p>
+        </div>
+
+        <div class="message-box">
+            <h2>Send Us a Message</h2>
+            <hr>
+            <form id="contactForm">
+                <input type="text" id="fullname" placeholder="Full Name *" required>
+                <input type="text" id="contact" placeholder="Contact # *" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="subject" placeholder="Subject">
+                <textarea id="message" placeholder="Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
